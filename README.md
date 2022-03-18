@@ -2,8 +2,13 @@
 
 ### Environment
 - Docker
-- Python version: 3.9
+- Python : 3.9
 
+- Requirements:
+  - Flask==1.1.4
+  - marshmallow==3.15.0
+  - markupsafe==2.0.1
+  
 ### Docker
 ``` sh
 docker build -t flask .
@@ -13,9 +18,12 @@ docker run -d -p 5000:5000 flask:latest
 docker ps -a
 
 docker logs <container ID>
-
 ``` 
 
+### Unittest
+``` sh
+pytest tests/test_tasks.py 
+``` 
 
 ### Project Structure Explanation
 ``` sh
